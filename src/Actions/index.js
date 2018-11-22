@@ -12,7 +12,7 @@ export function closeModal() {
 }
 
 export function searchTerm(query) {
-    return dispatch => dispatch({ type: actionTypes.SEARCH, query })
+    return dispatch => dispatch({ type: actionTypes.UPDATE_QUERY, query })
 }
 
 export function cleanChars() {

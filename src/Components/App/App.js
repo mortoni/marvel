@@ -8,7 +8,8 @@ import { connect } from 'react-redux';
 import { openModal,
          closeModal,
          searchTerm,
-         updateChars } from '../../Actions';
+         updateChars,
+         cleanChars } from '../../Actions';
 import PropTypes from 'prop-types';
 
 export const App = (props) =>  {
@@ -17,12 +18,15 @@ export const App = (props) =>  {
             modal,
             search,
             searchTerm,
-            updateChars } = props;
+            updateChars,
+            cleanChars } = props;
 
     const handleInputChange = (query) => {
         searchTerm(query);
         if (query.length + 1 > 2) {
             updateChars(query);
+        } else if (query.length === 0) {
+            cleanChars();
         }
     }
 
@@ -78,6 +82,7 @@ function mapDispatchToProps(dispatch) {
         closeModal: () => dispatch(closeModal()),
         searchTerm: (query) => dispatch(searchTerm(query)),
         updateChars: (query) => dispatch(updateChars(query)),
+        cleanChars: () => dispatch(cleanChars()),
     };
 }
 

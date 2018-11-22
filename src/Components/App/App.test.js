@@ -17,6 +17,7 @@ describe('Testing App component', () => {
         openModal: () => {},
         searchTerm: () => {},
         updateChars: () => {},
+        cleanChars: () => {},
     };
 
     it('renders correctly', () => {

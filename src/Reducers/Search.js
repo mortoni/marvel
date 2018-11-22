@@ -1,5 +1,5 @@
 import {
-    SEARCH,
+    UPDATE_QUERY,
     CLEAN_CHARS,
     UPDATE_CHARS,
     SEARCHING,
@@ -15,7 +15,7 @@ export function search(state = searchState, action) {
     const { chars, query } = action
 
     switch (action.type) {
-        case SEARCH:
+        case UPDATE_QUERY:
             return {
                 ...state,
                 query
