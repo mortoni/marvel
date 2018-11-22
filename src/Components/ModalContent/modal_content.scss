@@ -1,0 +1,33 @@
+
+.modal_content {
+    min-width: 800px;
+
+    .logo {
+        border-radius: .6rem;
+        padding: 1rem 0;
+        border: 1px solid red;
+
+        img {
+            width: 6rem;
+        }
+    }
+
+    .btn-group-vertical {
+        button {
+            margin: .3rem 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .modal_content {
+        min-width: inherit;
+        margin-top: 2.5rem;
+
+        .logo {
+            img {
+                width: 8rem;
+            }
+        }
+    }
+}
